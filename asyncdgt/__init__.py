@@ -654,6 +654,17 @@ class Connection(pyee.EventEmitter):
         return self.board.copy()
 
     @asyncio.coroutine
+    def get_battery_status(self):
+        """
+        Coroutine. Get the board battery status.
+        """
+        self.battery_status_received.clear()
+        yield from self.connected.wait()
+        self.write(bytearray([DGT_SEND_BATTERY_STATUS]))
+        yield from self.battery_status_received.wait()
+        return self.battery_status
+
+    @asyncio.coroutine
     def get_serialnr(self):
         """Coroutine. Get the board serial number."""
         self.serialnr_received.clear()

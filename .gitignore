@@ -5,3 +5,5 @@ asyncdgt.egg-info
 asyncdgt/__pycache__
 pythonhosted.zip
 release-*.txt
+
+.idea/

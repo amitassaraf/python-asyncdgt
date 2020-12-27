@@ -21,6 +21,10 @@ Communicate asynchronously with DGT boards.
 
 __author__ = "Niklas Fiekas"
 
+__maintainer__ = "Amit Assaraf"
+
 __email__ = "niklas.fiekas@tu-clausthal.de"
 
-__version__ = "0.0.1"
+__maintainer_email__ = "amit.assaraf@gmail.com"
+
+__version__ = "0.0.2"
